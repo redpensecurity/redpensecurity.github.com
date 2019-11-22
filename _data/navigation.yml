@@ -5,7 +5,7 @@ main:
   - title: "vulnserver"
     url: /vulnserver/
     children:
-      - title: "RUN EIP Overwrite"
+      - title: "TRUN EIP Overwrite"
         url: /vulnserver/trun/
   # - title: "Sample Collections"
   #   url: /collection-archive/

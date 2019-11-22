@@ -9,5 +9,4 @@ entries_layout: grid
 classes: wide
 ---
 
-
-This post has many tags.
+Write up will go here.
