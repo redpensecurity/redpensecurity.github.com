@@ -109,13 +109,13 @@ analytics:
 author:
   name             : "Charles Bouley, MSIT"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "CISSP|OSCE|OSCP|OSWP"
+  bio              : "CISSP/OSCE/OSCP/OSWP"
   location         : "Rhode Island"
   email            : "charles.bouley@redpensecurity.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:charles.bouley@gmail.com
+      # url: mailto:charles.bouley@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://redpensecurity.com"
