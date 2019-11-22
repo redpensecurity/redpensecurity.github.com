@@ -285,8 +285,10 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
+      type: main
     values:
+      sidebar:
+        nav: "main"
       layout: single
       author_profile: true
       read_time: true

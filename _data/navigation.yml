@@ -3,6 +3,8 @@ main:
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Vulnserver"
-    url: /vulnserver/
+    children:
+      - title: "Vulnserver TRUN EIP Overwrite"
+        url: /vulnserver/trun/
   # - title: "Sample Collections"
   #   url: /collection-archive/
