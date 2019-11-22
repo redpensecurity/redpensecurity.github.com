@@ -159,8 +159,7 @@ footer:
 include:
   - .htaccess
   - _pages
-  - /writeups
-  - /writeups/_vulnserver
+include: ["_writeups"]
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
