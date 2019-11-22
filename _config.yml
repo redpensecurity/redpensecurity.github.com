@@ -159,7 +159,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  - _vulnserver
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
