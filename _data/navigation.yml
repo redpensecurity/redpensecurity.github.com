@@ -2,7 +2,8 @@
 main:
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Vulnserver"
+  - title: "vulnserver"
+    url: /vulnserver
     children:
       - title: "Vulnserver TRUN EIP Overwrite"
         url: /vulnserver/trun/

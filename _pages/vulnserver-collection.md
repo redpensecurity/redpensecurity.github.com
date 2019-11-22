@@ -3,6 +3,8 @@ title: Vulnserver
 layout: home
 permalink: /vulnserver/
 collection: vulnserver
+sidebar:
+  nav: "main"
 entries_layout: grid
 classes: wide
 ---
