@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "RedPen Security Blog"
 title_separator          : "-"
-subtitle                 : "Risk Assessments, Hack The Box, VulnHub" # site tagline that appears below site title in masthead
+subtitle                 : "Risk Assessments, Write-ups, Ideas" # site tagline that appears below site title in masthead
 name                     : "RedPen Security, LLC"
 description              : #
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
