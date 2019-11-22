@@ -1,6 +1,6 @@
 ---
 title: Vulnserver
-layout: collection
+layout: home
 permalink: /vulnserver/
 collection: vulnserver
 entries_layout: grid
