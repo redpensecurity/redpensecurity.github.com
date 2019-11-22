@@ -5,8 +5,8 @@ main:
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Vulnserver"
-    url: /docs/_vulnserver/
+    url: /docs/vulnserver/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   - title: "Sitemap"
-    url: /_vulnserver/
+    url: /writeups/_vulnserver/
