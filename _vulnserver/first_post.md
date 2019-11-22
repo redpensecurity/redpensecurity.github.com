@@ -1,13 +1,10 @@
 ---
-defaults:
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      share: true
+title: TRUN EIP Overwrite
+layout: home
+permalink: /vulnserver/
+collection: vulnserver
+entries_layout: grid
+classes: wide
 ---
 
 This is the first test post for a Collection.
