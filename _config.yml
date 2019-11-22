@@ -297,4 +297,4 @@ defaults:
 collections:
   vulnserver:
     output: true
-    permalink: /vulnserver/:path/
+    permalink: /:collection/:path/
