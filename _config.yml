@@ -159,9 +159,7 @@ footer:
 include:
   - .htaccess
   - _pages
-include: ["writeups"]
-include: ["writeups/_vulnserver"]
-includE: ["_vulnserver"]
+  - _vulnserver
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -169,6 +167,7 @@ exclude:
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
+  - .sass-cache
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
