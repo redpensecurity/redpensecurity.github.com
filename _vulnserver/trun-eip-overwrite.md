@@ -27,3 +27,12 @@ Begin by using the below proof of concept script, developed by using the SPIKE f
 		expl.connect(("192.168.83.128", 9999))
 		expl.send(buffer)
     expl.close()
+
+Running this POC script against Vulnserver produces the same result in the OllyDbg debugger as our previous SPIKE fuzzing attempts. As a very nice bonus, the input we sent has been used to control the value of a very important register in the CPU – the EIP (Extended Instruction Pointer) register. Notice how the EIP register contains the value 41414141?
+		
+	
+
+Additional testing proves that a 2500 byte buffer will also cause the Vulnserver application to crash due to an access violation. Create a 2500 byte patterned string to identify which part of the buffer is being stored in the EIP.
+	> /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2500
+	
+Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
