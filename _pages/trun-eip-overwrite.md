@@ -1,13 +1,3 @@
----
-title: "TRUN EIP Overwrite"
-layout: home
-permalink: /vulnserver/trun/
-collection: vulnserver
-sidebar:
-  nav: "main"
-entries_layout: grid
-classes: wide
----
 
 Nothing clever here :wink:. Layouts, data files, and includes are all placed in their default locations. Stylesheets and scripts in `assets`, and a few development related files in the project's root directory.
 
