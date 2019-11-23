@@ -11,7 +11,8 @@ classes: wide
 
 Begin by using the below proof of concept script, developed by using the SPIKE fuzzer to identify a hole in the Vulnserver TRUN command.
 
-	Vulnserver TRUN Python Script: POC
+Vulnserver TRUN Python Script: POC
+
 		```py
     #!/usr/bin/python
 		import socket
@@ -39,7 +40,8 @@ Additional testing proves that a 2500 byte buffer will also cause the Vulnserver
 
 Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
 
-  Vulnserver TRUN Python Script: Pattern
+Vulnserver TRUN Python Script: Pattern
+
     ```py
     #!/usr/bin/python
     import socket
