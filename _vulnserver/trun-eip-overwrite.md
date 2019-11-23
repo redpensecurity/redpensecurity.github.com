@@ -56,4 +56,4 @@ Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
 
 Running the Vulnserver TRUN Pattern Python Script against the target system shows that the following pattern value is being stored in EIP.
 
-![trun-eip-overwrite-media-02](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02png)
+![trun-eip-overwrite-media-02](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png)
