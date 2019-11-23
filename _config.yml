@@ -107,9 +107,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Charles Bouley, MSIT"
+  name             : "Charles Bouley"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "CISSP / OSCE / OSCP / OSWP"
+  bio              : "CISSP/OSCE/OSCP/OSWP"
   location         : "Providence, RI"
   email            : "charles.bouley@redpensecurity.com"
   links:
