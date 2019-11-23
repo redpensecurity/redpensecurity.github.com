@@ -29,6 +29,7 @@ Begin by using the below proof of concept script, developed by using the SPIKE f
 		expl.send(buffer)
     expl.close()
     ```
+
 Running this POC script against Vulnserver produces the same result in the OllyDbg debugger as our previous SPIKE fuzzing attempts. As a very nice bonus, the input we sent has been used to control the value of a very important register in the CPU – the EIP (Extended Instruction Pointer) register. Notice how the EIP register contains the value 41414141?
 
 ![trun-eip-overwrite-media-01](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-01.png)
@@ -56,6 +57,7 @@ Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
     expl.send(buffer)
     expl.close()
     ```
+
 Running the Vulnserver TRUN Pattern Python Script against the target system shows that the following pattern value is being stored in EIP.
 
 ![trun-eip-overwrite-media-02](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png)
