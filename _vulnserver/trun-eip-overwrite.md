@@ -61,9 +61,9 @@ expl.close()
 
 Running the Vulnserver TRUN Pattern Python Script against the target system shows that the following pattern value is being stored in EIP.
 
-///<p align="center">
-///  <img src="/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png">
-///</p>
+# <p align="center">
+# <img src="/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png">
+# </p>
 
 ![trun-eip-overwrite-media-02 align="center"](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png)
 
