@@ -60,7 +60,7 @@ expl.close()
 
 Running the Vulnserver TRUN Pattern Python Script against the target system shows that the following pattern value is being stored in EIP.
 
-![trun-eip-overwrite-media-02](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png)
+![trun-eip-overwrite-media-02 align="center"](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png)
 
 EIP address is 386F4337. Use the Metasploit pattern offset utility to identify where the bytes are located in the 2500 byte buffer.
 	 > /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 2500 -q 386F4337
