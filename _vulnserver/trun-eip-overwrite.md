@@ -1,7 +1,6 @@
 ---
 title: "TRUN EIP Overwrite"
 layout: home
-minimal_mistakes_skin: "dark"
 permalink: /vulnserver/trun/
 collection: vulnserver
 sidebar:
