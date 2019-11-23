@@ -7,5 +7,7 @@ main:
     children:
       - title: "TRUN EIP Overwrite"
         url: /vulnserver/trun/
+      - title: "KSTET Minimal Buffer Using Egghunter"
+        url: /vulnserver/kstet/
   # - title: "Sample Collections"
   #   url: /collection-archive/
