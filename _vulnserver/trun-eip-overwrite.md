@@ -35,8 +35,10 @@ Running this POC script against Vulnserver produces the same result in the OllyD
 ![trun-eip-overwrite-media-01](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-01.png)
 
 Additional testing proves that a 2500 byte buffer will also cause the Vulnserver application to crash due to an access violation. Create a 2500 byte patterned string to identify which part of the buffer is being stored in the EIP.
-	> /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2500
 
+```bash
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2500
+```
 Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
 
 ```py
