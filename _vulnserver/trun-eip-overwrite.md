@@ -57,3 +57,10 @@ Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
 Running the Vulnserver TRUN Pattern Python Script against the target system shows that the following pattern value is being stored in EIP.
 
 ![trun-eip-overwrite-media-02](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-02.png)
+
+EIP address is 386F4337. Use the Metasploit pattern offset utility to identify where the bytes are located in the 2500 byte buffer.
+	 > /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 2500 -q 386F4337
+
+![trun-eip-overwrite-media-03](/screenshots/vulnserver/trun-eip-overwrite/trun-eip-overwrite-media-03.png)
+
+An exact match was found at offset 2003 bytes.  Modify the buffer in the POC script to now send 2003 "A" characters, 4 "B" characters, and 1993 "C" characters; this should overwrite EIP with 4 "B" characters while retaining a 4000 byte buffer size.
