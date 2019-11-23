@@ -11,9 +11,9 @@ classes: wide
 
 Begin by using the below proof of concept script, developed by using the SPIKE fuzzer to identify a hole in the Vulnserver TRUN command.
 
-Vulnserver TRUN Python Script: POC
 ```py
 #!/usr/bin/python
+# Vulnserver TRUN Python Script: POC
 import socket
 import os
 import sys
@@ -39,9 +39,9 @@ Additional testing proves that a 2500 byte buffer will also cause the Vulnserver
 
 Insert the 2500 character pattern into the Vulnserver TRUN POC Python Script.
 
-Vulnserver TRUN Python Script: Pattern
 ```py
 #!/usr/bin/python
+# Vulnserver TRUN Python Script: Pattern
 import socket
 import os
 import sys
@@ -99,9 +99,9 @@ Running the updated script against the Vulnserver crashes the server and produce
 
 The crash buffer has successfully overwritten EIP with four (4) "B" "\x42" characters; we now have control over EIP. The next step is to identify any bad characters the might not work for our shellcode.
 
-Vulnserver TRUN Python Script: Bad Characters
 ```py
 #!/usr/bin/python
+# Vulnserver TRUN Python Script: Bad Characters
 import socket
 import os
 import sys
