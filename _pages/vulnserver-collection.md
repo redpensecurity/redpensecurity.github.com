@@ -19,14 +19,12 @@ More information on Vulnserver can be found at the following GitHub page.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vulnserver GitHub](https://github.com/stephenbradshaw/vulnserver)
 
 The following write ups were performed while testing Vulnserver in the following test environment.
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hypervisor: VMware Workstation 15 Pro  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attack Machine: Kali Linux 2019 (32-bit)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Victim Machine: Windows 7 SP1 (32-bit)  
 
 
 The following write-ups assume that the reader is familiar with application fuzzing using the SPIKE platform.
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SPIKE Presentation](https://www.blackhat.com/presentations/bh-usa-02/bh-us-02-aitel-spike.ppt)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SPIKE Basics](https://resources.infosecinstitute.com/intro-to-fuzzing/)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SPIKE Automation](https://resources.infosecinstitute.com/fuzzer-automation-with-spike/)
