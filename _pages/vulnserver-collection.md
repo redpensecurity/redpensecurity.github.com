@@ -16,14 +16,22 @@ The software is developed by Stephen Bradshaw and is intended mainly as a tool f
 Though it does make an attempt to mimic a (simple) legitimate server program this software has no functional use beyond that of acting as an exploit target, and this software should not generally be run by anyone who is not using it as a learning tool.
 
 More information on Vulnserver can be found at the following GitHub page.
-  URL: https://github.com/stephenbradshaw/vulnserver
+
+  [Vulnserver GitHub](https://github.com/stephenbradshaw/vulnserver)
 
 The following write ups were performed while testing Vulnserver in the following test environment.
+
   Hypervisor: VMware Workstation 15 Pro
+
   Attack Machine: Kali Linux 2019 (32-bit)
+
   Victim Machine: Windows 7 SP1 (32-bit)
+  
 
 The following write-ups assume that the reader is familiar with application fuzzing using the SPIKE platform.
-  SPIKE Presentation: https://www.blackhat.com/presentations/bh-usa-02/bh-us-02-aitel-spike.ppt
-  SPIKE Basics: https://resources.infosecinstitute.com/intro-to-fuzzing/
-  SPIKE Automation: https://resources.infosecinstitute.com/fuzzer-automation-with-spike/
+
+  [SPIKE Presentation](https://www.blackhat.com/presentations/bh-usa-02/bh-us-02-aitel-spike.ppt)
+
+  [SPIKE Basics](https://resources.infosecinstitute.com/intro-to-fuzzing/)
+
+  [SPIKE Automation](https://resources.infosecinstitute.com/fuzzer-automation-with-spike/)
