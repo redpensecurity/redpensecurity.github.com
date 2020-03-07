@@ -2,14 +2,14 @@
 main:
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "vulnserver"
+  - title: "Vulnserver"
     url: /vulnserver/
     children:
       - title: "TRUN EIP Overwrite"
         url: /vulnserver/trun/
       - title: "KSTET Minimal Buffer Using Egghunter"
         url: /vulnserver/kstet/
-  - title: "backdoor"
+  - title: "Backdoor Binaries"
     url: /backdoor/
     children:
       - title: "Patching Netcat... with Shellcode"
