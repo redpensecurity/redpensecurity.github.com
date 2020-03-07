@@ -1,7 +1,7 @@
 ---
 title: "Patching Netcat... with Shellcode"
 layout: home
-permalink: /backdoor/patchcat/
+permalink: /backdoor/patchnetcat/
 collection: backdoor
 sidebar:
   nav: "main"

@@ -13,6 +13,6 @@ main:
     url: /backdoor/
     children:
       - title: "Patching Netcat... with Shellcode"
-        url: /backdoor/patchcat/
+        url: /backdoor/patchnetcat/
   # - title: "Sample Collections"
   #   url: /collection-archive/
