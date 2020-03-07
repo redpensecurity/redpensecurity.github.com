@@ -9,5 +9,10 @@ main:
         url: /vulnserver/trun/
       - title: "KSTET Minimal Buffer Using Egghunter"
         url: /vulnserver/kstet/
+  - title: "backdoor"
+    url: /backdoor/
+    children:
+      - title: "Patching Netcat... with Shellcode"
+        url: /backdoor/patchcat/
   # - title: "Sample Collections"
   #   url: /collection-archive/
